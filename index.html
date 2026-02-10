@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takato Studio | 3D Web Developer & Creative Engineer</title>
+    <meta name="description" content="Three.js / WebGL を活用したインタラクティブWeb体験を制作。3Dサイト構築、クリエイティブコーディングのポートフォリオ。">
+    <meta name="keywords" content="Three.js,WebGL,3D Web,クリエイティブコーディング,Web開発,ポートフォリオ">
+    <meta name="author" content="Takato Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://takato180.github.io/portfolio/">
+
+    <!-- OGP -->
+    <meta property="og:title" content="Takato Studio | 3D Web Developer">
+    <meta property="og:description" content="Three.js / WebGL によるインタラクティブ3D Web体験を制作しています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://takato180.github.io/portfolio/">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Takato Studio | 3D Web Developer">
+    <meta name="twitter:description" content="Three.js / WebGL によるインタラクティブ3D Web体験を制作しています。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div id="cursor" class="cursor"></div>
+    <div id="cursor-ring" class="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Takato<span class="logo-dot">.</span>Studio<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#works" class="nav-link">Works</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#resources" class="nav-link">Resources</a>
+            </div>
+            <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#works" class="mobile-link">Works</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#resources" class="mobile-link">Resources</a>
+    </div>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-tag">Creative Web Developer</div>
+            <h1 class="hero-title">
+                <span class="title-line">Crafting</span>
+                <span class="title-line title-accent">3D Web</span>
+                <span class="title-line">Experiences</span>
+            </h1>
+            <p class="hero-desc">Three.js / WebGL を活用した没入型Webサイトを制作しています。<br>インタラクティブな3D体験で、ブランドの世界観を伝えます。</p>
+            <div class="hero-buttons">
+                <a href="#works" class="btn-primary">View Works</a>
+                <a href="#resources" class="btn-outline">Resources</a>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-label">01 / About</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Web に<br><span class="text-gradient">次元</span>を加える</h2>
+                    <p>従来の2D Webサイトでは伝えきれない体験を、Three.js / WebGL の力で実現します。</p>
+                    <p>ライブステージの臨場感、プロダクトの質感、ブランドの世界観 ― 3Dインタラクティブ技術でユーザーの記憶に残るWeb体験を構築します。</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="5500">0</span><span class="stat-unit">+</span>
+                            <span class="stat-label">Lines of JS</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="60">0</span><span class="stat-unit">+</span>
+                            <span class="stat-label">3D Themes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="3">0</span><span class="stat-unit">D</span>
+                            <span class="stat-label">Immersive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <canvas id="about-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works -->
+    <section id="works" class="section section-dark">
+        <div class="container">
+            <div class="section-label">02 / Works</div>
+            <h2 class="section-title">Selected <span class="text-gradient">Projects</span></h2>
+            <div class="works-grid">
+                <a href="https://takato180.github.io/equal-love-fan/" target="_blank" rel="noopener" class="work-card work-featured">
+                    <div class="work-img">
+                        <div class="work-img-placeholder">
+                            <span class="work-icon">&#9653;</span>
+                            <span>=LOVE 3D Stage</span>
+                        </div>
+                        <div class="work-overlay">
+                            <span class="work-view">View Project &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-tags">
+                            <span>Three.js</span><span>WebGL</span><span>GLSL</span><span>YouTube API</span>
+                        </div>
+                        <h3>=LOVE Interactive Fan Experience</h3>
+                        <p>GLBステージモデル、60曲以上のリアルタイム3Dエフェクト連動、ペンライト演出、Exploreモードを実装した没入型ファンサイト。</p>
+                    </div>
+                </a>
+                <div class="work-card work-coming">
+                    <div class="work-img">
+                        <div class="work-img-placeholder placeholder-2">
+                            <span class="work-icon">&lt;/&gt;</span>
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-tags"><span>Three.js</span><span>React</span></div>
+                        <h3>Project 02</h3>
+                        <p>新規プロジェクト準備中</p>
+                    </div>
+                </div>
+                <div class="work-card work-coming">
+                    <div class="work-img">
+                        <div class="work-img-placeholder placeholder-3">
+                            <span class="work-icon">&diams;</span>
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-tags"><span>WebGL</span><span>GLSL</span></div>
+                        <h3>Project 03</h3>
+                        <p>新規プロジェクト準備中</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-label">03 / Skills</div>
+            <h2 class="section-title">Tech <span class="text-gradient">Stack</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">&lt;3D&gt;</div>
+                    <h3>3D / WebGL</h3>
+                    <ul>
+                        <li>Three.js</li>
+                        <li>GLSL Shaders</li>
+                        <li>GLTFLoader / GLB</li>
+                        <li>OrbitControls</li>
+                        <li>Particle Systems</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">{&thinsp;}</div>
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript (ES Modules)</li>
+                        <li>Responsive Design</li>
+                        <li>CSS Animations</li>
+                        <li>Web APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#9881;</div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Blender (3D Modeling)</li>
+                        <li>Git / GitHub</li>
+                        <li>VS Code</li>
+                        <li>GitHub Pages</li>
+                        <li>SEO / OGP / JSON-LD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources (収益化ポイント) -->
+    <section id="resources" class="section section-dark">
+        <div class="container">
+            <div class="section-label">04 / Resources</div>
+            <h2 class="section-title">Learning <span class="text-gradient">Resources</span></h2>
+            <p class="resources-desc">3D Web開発を学びたい方へ ― 厳選したリソースを紹介します。</p>
+
+            <div class="resources-grid">
+                <!-- アフィリエイトリンク枠（Amazon / Udemy 等に差し替え可能） -->
+                <a href="#" class="resource-card" data-affiliate="true">
+                    <div class="resource-badge">Book</div>
+                    <div class="resource-icon">//</div>
+                    <h3>Three.js 入門書</h3>
+                    <p>WebGL / Three.js の基礎から実践まで学べる定番書籍。初心者にもおすすめ。</p>
+                    <span class="resource-cta">Check on Amazon &rarr;</span>
+                </a>
+                <a href="#" class="resource-card" data-affiliate="true">
+                    <div class="resource-badge">Course</div>
+                    <div class="resource-icon">&gt;_</div>
+                    <h3>Three.js Journey</h3>
+                    <p>Bruno Simon によるThree.js の決定版オンラインコース。GLSLシェーダーまで網羅。</p>
+                    <span class="resource-cta">View Course &rarr;</span>
+                </a>
+                <a href="#" class="resource-card" data-affiliate="true">
+                    <div class="resource-badge">Tool</div>
+                    <div class="resource-icon">[B]</div>
+                    <h3>Blender</h3>
+                    <p>無料でプロ品質の3Dモデリングが可能。GLB / glTF エクスポートにも対応。</p>
+                    <span class="resource-cta">Download Free &rarr;</span>
+                </a>
+                <a href="#" class="resource-card" data-affiliate="true">
+                    <div class="resource-badge">Book</div>
+                    <div class="resource-icon">#_</div>
+                    <h3>WebGL/GLSL 入門</h3>
+                    <p>シェーダープログラミングの基礎を理解するための一冊。表現の幅が格段に広がります。</p>
+                    <span class="resource-cta">Check on Amazon &rarr;</span>
+                </a>
+            </div>
+
+            <p class="affiliate-notice">* 一部リンクにはアフィリエイトリンクが含まれる場合があります</p>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy">&copy; 2026 Takato Studio. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Takato180" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google AdSense placeholder (審査通過後に差し替え) -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script> -->
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
