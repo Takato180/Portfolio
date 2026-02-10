@@ -9,7 +9,7 @@ Three.js / WebGL を活用したインタラクティブ 3D Web 体験を制作�
 |------|------|
 | サイト名 | Takato Studio |
 | 種別 | ポートフォリオ / リソース紹介 |
-| URL | https://takato180.github.io/portfolio/ |
+| URL | https://takato180.github.io/Portfolio/ |
 | テーマ | ダークテーマ（パープルアクセント） |
 | 対応 | レスポンシブ（PC / タブレット / スマホ） |
 
